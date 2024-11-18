@@ -5,8 +5,8 @@ export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
     // Update paths to use public folder
-    const websiteUrl = 'http://localhost:3000'; 
-    const logoUrl = 'http://localhost:3000/nekcy.png';
+    const websiteUrl = 'https://nekcy.vercel.app/'; 
+    const logoUrl = 'https://nekcy.vercel.app/nekcy.png';
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
