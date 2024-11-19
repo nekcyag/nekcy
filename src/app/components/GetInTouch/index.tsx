@@ -241,7 +241,7 @@ const GetInTouchSection = () => {
               <div className="space-y-4">
                 {[ 
                   { name: "Matheus Montovaneli", role: "Desenvolvedor Frontend", email: "contatodoneli@gmail.com" },
-                  { name: "André Nakamatsu", role: "Desenvolvedor Backend", email: "andrenakamatsu@gmail.com" },
+                  { name: "André Nakamatsu", role: "Desenvolvedor Backend", email: "andrenakarocha@hotmail.com" },
                 ].map((dev, index) => (
                   <motion.div
                     key={index}
