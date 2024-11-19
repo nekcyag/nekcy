@@ -4,6 +4,7 @@ import { Menu, X, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Header = () => {
   const [showFloatingHeader, setShowFloatingHeader] = useState(false);
@@ -59,9 +60,19 @@ const Header = () => {
       <header className="relative z-50">
         <div className="container mx-auto py-4 px-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-transform">
-              <Link href="/">Nekcy</Link>
-            </h1>
+          <Link href="/" className="hover:scale-105 transition-transform flex items-center gap-2">
+            <Image 
+              src="/nekcy-logo.svg"
+              alt="Nekcy Logo"
+              width={80}
+              height={40}
+              className="object-contain w-auto h-8"
+              priority
+            />
+            <span className="bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text font-bold text-xl">
+              Nekcy
+            </span>
+          </Link>
 
             <div className="hidden md:flex items-center gap-6">
               <nav>
@@ -96,9 +107,19 @@ const Header = () => {
         <div className="mx-4 mt-4">
           <div className="container mx-auto bg-white/10 backdrop-blur-md rounded-full px-6 shadow-lg">
             <div className="py-3 px-4 flex justify-between items-center">
-              <h1 className="text-xl font-bold text-blue-600 hover:scale-105 transition-transform">
-                Nekcy
-              </h1>
+            <Link href="/" className="hover:scale-105 transition-transform flex items-center gap-2">
+            <Image 
+              src="/nekcy-logo.svg"
+              alt="Nekcy Logo"
+              width={80}
+              height={40}
+              className="object-contain w-auto h-8"
+              priority
+            />
+            <span className="bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text font-bold text-xl">
+              Nekcy
+            </span>
+          </Link>
 
               <div className="hidden md:flex items-center gap-6">
                 <nav>

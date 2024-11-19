@@ -1,7 +1,6 @@
 "use client"
 
 import { useScroll, useSpring } from 'framer-motion'
-
 import HeroSection from './components/HeroSection'
 import TestimonialsSection from './components/TestimonalSection'
 import GetInTouchSection from './components/GetInTouch'
