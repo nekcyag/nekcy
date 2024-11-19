@@ -26,7 +26,7 @@ const Header = () => {
     <ul className={`flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 ${className}`}>
       {menuItems.map((item) => (
         <li key={item}>
-          <Link href={`/${item.toLowerCase()}`} className={`text-gray-600 hover:text-blue-500 transition-colors ${itemClassName}`}>
+          <Link href={`#${item.toLowerCase()}`} className={`text-gray-600 hover:text-blue-500 transition-colors ${itemClassName}`}>
             {item}
           </Link>
         </li>

@@ -1,28 +1,86 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export async function POST(request: Request) {
-  try {
-    const { name, email, message } = await request.json();
-    // Update paths to use public folder
-    const websiteUrl = 'https://nekcy.vercel.app'; 
-    const logoUrl = 'https://nekcy.vercel.app/nekcy.png';
+// Types for request body
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
+// Types for SMTP config
+interface SmtpConfig {
+  host: string;
+  port: number;
+  secure: boolean;
+}
+
+// Types for mail options
+interface MailOptions {
+  from: string;
+  to: string;
+  subject: string;
+  html: string;
+}
+
+// Helper function with proper typing
+function getSmtpConfig(email: string): SmtpConfig {
+  const domain = email.split('@')[1].toLowerCase();
+  
+  const configs: Record<string, SmtpConfig> = {
+    'gmail.com': {
       host: 'smtp.gmail.com',
       port: 465,
-      secure: true,
+      secure: true
+    },
+    'outlook.com': {
+      host: 'smtp-mail.outlook.com',
+      port: 587,
+      secure: false
+    },
+    'hotmail.com': {
+      host: 'smtp-mail.outlook.com',
+      port: 587,
+      secure: false
+    },
+    'yahoo.com': {
+      host: 'smtp.mail.yahoo.com',
+      port: 465,
+      secure: true
+    },
+    'default': {
+      host: 'smtp.office365.com',
+      port: 587,
+      secure: false
+    }
+  };
+
+  return configs[domain] || configs['default'];
+}
+
+export async function POST(request: Request) {
+  try {
+    const { name, email, message }: ContactFormData = await request.json();
+    const websiteUrl = 'https://nekcy.vercel.app';
+    const logoUrl = 'https://nekcy.vercel.app/nekcy.png';
+
+    const emailUser = process.env.EMAIL_USER as string;
+    const smtpConfig = getSmtpConfig(emailUser);
+
+    const transporter = nodemailer.createTransport({
+      ...smtpConfig,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      tls: {
+        rejectUnauthorized: false
+      }
     });
 
-    // Update the email template with improved mobile styles
-    const adminMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+    const adminMailOptions: MailOptions = {
+      from: emailUser,
+      to: emailUser,
       subject: `💌 Nova mensagem de ${name}`,
       html: `
         <!DOCTYPE html>
@@ -79,12 +137,11 @@ export async function POST(request: Request) {
             </table>
           </body>
         </html>
-      `,
+      `
     };
 
-    // Confirmation to user with professional design
-    const userMailOptions = {
-      from: process.env.EMAIL_USER,
+    const userMailOptions: MailOptions = {
+      from: emailUser,
       to: email,
       subject: '✨ Obrigado por escolher a Nekcy!',
       html: `
@@ -160,8 +217,8 @@ export async function POST(request: Request) {
 
                     <!-- CTAs -->
                     <div class="button-container" style="text-align: center; margin: 32px 0;">
-                      <a href="${websiteUrl}/portfolio" class="button" style="display: inline-block; background: #3b82f6; color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 500; margin: 0 8px;">Ver Portfólio</a>
-                      <a href="${websiteUrl}/servicos" class="button" style="display: inline-block; background: #f8fafc; color: #1e293b; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 500; border: 1px solid #e2e8f0;">Nossos Serviços</a>
+                      <a href="${websiteUrl}#portfolio" class="button" style="display: inline-block; background: #3b82f6; color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 500; margin: 0 8px;">Ver Portfólio</a>
+                      <a href="${websiteUrl}#services" class="button" style="display: inline-block; background: #f8fafc; color: #1e293b; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 500; border: 1px solid #e2e8f0;">Nossos Serviços</a>
                     </div>
 
                     <!-- Social Media -->
@@ -185,7 +242,7 @@ export async function POST(request: Request) {
             </table>
           </body>
         </html>
-      `,
+      `
     };
 
     await Promise.all([
@@ -199,7 +256,7 @@ export async function POST(request: Request) {
     );
 
   } catch (error) {
-    console.error('Erro ao enviar email:', error);
+    console.error('Error:', error);
     return NextResponse.json(
       { error: 'Erro ao enviar email' },
       { status: 500 }
