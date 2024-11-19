@@ -17,7 +17,7 @@ const GetInTouchSection = () => {
         "Desenvolvimento personalizado para seu usuário",
         "1-3 semanas para o lançamento",
       ],
-      buttonText: "Agende uma chamada gratuita",
+      buttonText: "Agende uma call gratuita",
       gradient: "from-blue-500 to-indigo-500"
     },
     {
@@ -28,7 +28,7 @@ const GetInTouchSection = () => {
         "Desenvolvimento rápido, seguro e confiável",
         "Design + desenvolvimento tudo incluído",
       ],
-      buttonText: "Agende uma chamada gratuita",
+      buttonText: "Agende uma call gratuita",
       gradient: "from-purple-500 to-pink-500"
     }
   ];
