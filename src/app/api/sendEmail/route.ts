@@ -119,7 +119,7 @@ export async function POST(request: Request) {
               <tr>
                 <td class="content">
                   <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
-                    <img src="${logoUrl}" alt="Nekcy Logo" style="width: 120px; margin-bottom: 24px;">
+                    <img src="${logoUrl}" alt="Nekcy Logo" style="width: 600px; margin-bottom: 24px;">
                     <h1 style="color: #1e293b; margin: 0 0 24px 0; font-size: 24px;">Nova Mensagem Recebida 📬</h1>
                     <div style="background: #f8fafc; border-radius: 8px; padding: 24px; margin-bottom: 24px;">
                       <p style="color: #475569; margin: 0 0 16px 0;"><strong style="color: #1e293b;">Nome:</strong> ${name}</p>
@@ -177,7 +177,7 @@ export async function POST(request: Request) {
               <tr>
                 <td>
                   <div class="content" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
-                    <img src="${logoUrl}" alt="Nekcy Logo" style="width: 120px; margin-bottom: 24px;">
+                    <img src="${logoUrl}" alt="Nekcy Logo" style="width: 600px; margin-bottom: 24px;">
                     <h1 style="color: #1e293b; margin: 0 0 16px 0; font-size: 24px;">Olá ${name}! 👋</h1>
                     <p style="color: #475569; margin: 0 0 24px 0; line-height: 1.6;">
                       Que ótimo ter você aqui! Somos especializados em transformar ideias em experiências digitais memoráveis.
