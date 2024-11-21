@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export const WhatsAppCTA = () => {
   const [isOpen, setIsOpen] = useState(false);
   const phoneNumber = "+5511974022204"; 
-  const message = "Hello! I'd like to know more about your services.";
+  const message = "Olá! eu gostaria de saber mais sobre os seus serviços.";
 
   const handleWhatsAppClick = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -30,8 +30,8 @@ export const WhatsAppCTA = () => {
                   <MessageCircle className="text-white w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">Chat with us</h3>
-                  <p className="text-sm text-gray-500">We typically reply instantly</p>
+                  <h3 className="font-semibold text-gray-800">Whatsapp</h3>
+                  <p className="text-sm text-gray-500">Suporte rápido</p>
                 </div>
               </div>
               <button 
@@ -46,7 +46,7 @@ export const WhatsAppCTA = () => {
               className="w-full bg-green-500 hover:bg-green-600 text-white rounded-lg py-3 px-4 flex items-center justify-center gap-2 transition-colors"
             >
               <MessageCircle size={20} />
-              Start Chat
+              Enviar mensagem
             </button>
           </motion.div>
         )}
