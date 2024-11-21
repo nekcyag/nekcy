@@ -117,7 +117,7 @@ const CallToAction: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="mt-4 text-white/60 text-sm mb-8"
           >
-            Just click
+            Clique
           </motion.p>
         </motion.div>
       </div>
