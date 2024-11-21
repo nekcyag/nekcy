@@ -43,24 +43,24 @@ export default function PortfolioSection() {
       image: "/spooner.png",
       stats: { users: "100+", modules: "15+", satisfaction: "100%" }
     },
-    {
-      id: 3,
-      title: "Design System",
-      category: "design",
-      tags: ["Figma", "UI/UX", "Design Tokens"],
-      description: "Sistema de design escalável com componentes reutilizáveis e documentação completa.",
-      image: "/projects/design.jpg",
-      stats: { components: "200+", brands: "5+", downloads: "50K+" }
-    },
-    {
-      id: 4,
-      title: "Landing Page SaaS",
-      category: "design",
-      tags: ["Web Design", "Animation", "Branding"],
-      description: "Design moderno e conversível para produto SaaS com animações personalizadas.",
-      image: "/projects/saas.jpg",
-      stats: { conversion: "15%", engagement: "85%", bounce: "20%" }
-    },
+    // {
+    //   id: 3,
+    //   title: "Design System",
+    //   category: "design",
+    //   tags: ["Figma", "UI/UX", "Design Tokens"],
+    //   description: "Sistema de design escalável com componentes reutilizáveis e documentação completa.",
+    //   image: "/projects/design.jpg",
+    //   stats: { components: "200+", brands: "5+", downloads: "50K+" }
+    // },
+    // {
+    //   id: 4,
+    //   title: "Landing Page SaaS",
+    //   category: "design",
+    //   tags: ["Web Design", "Animation", "Branding"],
+    //   description: "Design moderno e conversível para produto SaaS com animações personalizadas.",
+    //   image: "/projects/saas.jpg",
+    //   stats: { conversion: "15%", engagement: "85%", bounce: "20%" }
+    // },
   ];
 
   const categories = ['all', 'web', 'design'];
