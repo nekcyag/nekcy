@@ -166,13 +166,13 @@ function CardServico({ icon: Icon, title, description, features, accent, index, 
             animate={{ opacity: isHovered ? 1 : 0.7 }}
             transition={{ duration: 0.3 }}
           >
-            <Button 
+            {/* <Button 
               variant="outline" 
               className="w-full md:w-auto group-hover:bg-blue-600 group-hover:text-white transition-colors"
             >
               Saiba Mais
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            </Button> */}
           </motion.div>
         </CardContent>
       </Card>
