@@ -49,7 +49,7 @@ export default function TermosDeServico() {
       </h1>
       
       <p className="text-gray-600 mb-6">
-        Última atualização: 20 de março de 2024
+        Última atualização: 20 de novembro de 2024
       </p>
 
       <button
@@ -99,8 +99,8 @@ export default function TermosDeServico() {
             Informações de Contato
           </p>
           <p className="mb-2">
-            E-mail: contato@nekcy-agencia.com.br<br />
-            Telefone: (555) 123-4567<br />
+            E-mail: nekcyagency@gmail.com<br />
+            {/* Telefone: (555) 123-4567<br /> */}
             Horário de funcionamento: Segunda - Sexta, 9:00 AM - 8:00 PM (Horário de Brasília)
           </p>
         </div>

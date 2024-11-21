@@ -240,8 +240,8 @@ const GetInTouchSection = () => {
               <h4 className="text-2xl font-bold mb-6 text-gray-800">Conheça Nossos Desenvolvedores</h4>
               <div className="space-y-4">
                 {[ 
-                  { name: "Matheus Montovaneli", role: "Desenvolvedor Frontend", email: "contatodoneli@gmail.com" },
-                  { name: "André Nakamatsu", role: "Desenvolvedor Backend", email: "andrenakarocha@hotmail.com" },
+                  { name: "Matheus Montovaneli", role: "Dev Frontend", email: "contatodoneli@gmail.com" },
+                  { name: "André Nakamatsu", role: "Dev Backend", email: "andrenakarocha@hotmail.com" },
                 ].map((dev, index) => (
                   <motion.div
                     key={index}
@@ -261,7 +261,7 @@ const GetInTouchSection = () => {
                       <p className="text-gray-600">{dev.role}</p>
                       <a href={`mailto:${dev.email}`} 
                          className="text-blue-500 hover:text-blue-600 transition-colors inline-flex items-center gap-1">
-                        {dev.email}
+                        Entre em contato
                         <ArrowRight className="w-4 h-4" />
                       </a>
                     </div>

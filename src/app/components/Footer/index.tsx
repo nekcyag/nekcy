@@ -77,19 +77,19 @@ export default function Footer() {
             <h5 className="text-xl font-semibold text-blue-500">Contato</h5>
             <div className="space-y-3">
               <a
-                href="mailto:contato@nekcy.com"
+                href="mailto:nekcyagency@gmail.com"
                 className="flex items-center space-x-2 text-gray-500 hover:text-blue-500 transition-colors duration-300 text-sm group"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span>contato@nekcy.com</span>
+                <span>nekcyagency@gmail.com</span>
               </a>
-              <a
+              {/* <a
                 href="tel:+5511974022204"
                 className="flex items-center space-x-2 text-gray-500 hover:text-blue-500 transition-colors duration-300 text-sm group"
               >
                 <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 <span>(11) 97402-2204</span>
-              </a>
+              </a> */}
               
               {/* Social Media */}
               <div className="flex space-x-4 pt-4">

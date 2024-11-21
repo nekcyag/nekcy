@@ -177,21 +177,21 @@ const CallToAction: React.FC = () => {
             </h5>
             <div className="space-y-4">
               <motion.a 
-                href="mailto:contact@anlihub.com" 
+                href="mailto:nekcyagency@gmail.com" 
                 className="group flex items-center text-white/70 hover:text-white transition-all duration-300"
                 whileHover={{ x: 5 }}
               >
                 <Mail className="w-5 h-5 mr-3 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
-                contact@anlihub.com
+                nekcyagency@gmail.com
               </motion.a>
-              <motion.a 
+              {/* <motion.a 
                 href="tel:+5511974022204" 
                 className="group flex items-center text-white/70 hover:text-white transition-all duration-300"
                 whileHover={{ x: 5 }}
               >
                 <Phone className="w-5 h-5 mr-3 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
                 +55 (11) 97402-2204
-              </motion.a>
+              </motion.a> */}
             </div>
           </motion.div>
 
@@ -238,7 +238,7 @@ const CallToAction: React.FC = () => {
           className="mt-16 pt-8 border-t border-white/10 text-center"
         >
           <p className="text-white/60 hover:text-white/80 transition-colors duration-300">
-            &copy; {new Date().getFullYear()} Anli Hub. All rights reserved.
+            &copy; {new Date().getFullYear()} Nekcy. All rights reserved.
           </p>
         </motion.div>
       </div>
