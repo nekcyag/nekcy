@@ -208,9 +208,9 @@ const CallToAction: React.FC = () => {
             </h5>
             <div className="flex space-x-4">
               {[
-                { icon: Github, href: "https://github.com/anlihub" },
-                { icon: Linkedin, href: "https://linkedin.com/company/anlihub" },
-                { icon: Instagram, href: "https://instagram.com/anlihub" }
+                // { icon: Github, href: "https://github.com/anlihub" },
+                { icon: Linkedin, href: "https://linkedin.com/company/nekcy-agency" },
+                { icon: Instagram, href: "https://instagram.com/nekcyagency" }
               ].map((social, index) => (
                 <motion.a
                   key={social.href}

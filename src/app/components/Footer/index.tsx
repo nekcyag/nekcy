@@ -94,7 +94,7 @@ export default function Footer() {
               {/* Social Media */}
               <div className="flex space-x-4 pt-4">
                 {[
-                  { icon: Github, href: "https://github.com/nekcy" },
+                  // { icon: Github, href: "https://github.com/nekcy" },
                   { icon: Linkedin, href: "https://linkedin.com/company/nekcy" },
                   { icon: Instagram, href: "https://instagram.com/nekcy" }
                 ].map((social) => (
