@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const Header = () => {
   const [showFloatingHeader, setShowFloatingHeader] = useState(false);
-  const menuItems = ['Home', 'Services', 'Portfolio', 'Clients', 'Contact'];
+  const menuItems = ['Home', 'Serviços', 'Portfolio', 'Clientes', 'Contato'];
 
   useEffect(() => {
     const originalHeaderHeight = 100; // adjust this value to match your original header height
@@ -49,7 +49,7 @@ const Header = () => {
     >
       <Phone className="w-4 h-4" />
       <Link href='https://cal.com/nekcy/15min'>
-        Book a Call
+        Faça uma call
       </Link>
     </motion.button>
   );
